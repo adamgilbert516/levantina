@@ -1,0 +1,143 @@
+html {
+  font-size: 18px;
+}
+
+.bg-blur {
+  background-color: rgba(255, 255, 255, 0.3); /* light see-through */
+  backdrop-filter: blur(10px);                /* apply blur */
+  -webkit-backdrop-filter: blur(10px);        /* Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* optional subtle border */
+  z-index: 1030;                               /* ensure it's above video */
+}
+/* Global font stack */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #212529;
+  scroll-padding-top: 80px;
+}
+
+/* Special font just for logo/title */
+.navbar,
+.navbar-brand,
+h2 {
+  font-family: 'Sacramento', cursive;
+}
+
+/* Optional: logo font size only */
+.navbar-brand {
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+/* Optional: keep the pink border on navbar */
+.navbar {
+  border: 5px solid rgb(251, 209, 209);
+}
+
+
+.video-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.vignette-video {
+  width: 100%;
+  max-height: 800px;
+  object-fit: cover;
+  display: block;
+}
+
+.video-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.4) 70%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 0;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.pink-background {
+  background-color: rgb(251,209,209);
+}
+
+.red-background {
+  background-color: rgb(236,140,132);
+}
+
+.hero-image-container {
+  height: 100vh;         /* full viewport height */
+  width: 100vw;          /* full viewport width */
+  overflow: hidden;      /* hide overflow if image exceeds */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.hero-image-container img {
+  width: 100%;
+  height: 130vh;
+  object-fit: cover;     /* crop to fill while maintaining proportion */
+  object-position: center bottom;
+  top: 0;
+  position: sticky;
+  display: block;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.navbar .fa-instagram {
+  color: #d63384; /* or your brand color */
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar .fa-instagram:hover {
+  color: #ad1457;
+}
+
+@media (max-width: 576px) {
+  .nav-link {
+    padding: 0.75rem 1.25rem;
+  }
+  html {
+    font-size: 20px; /* bump from 18px to ~20px on phones */
+  }
+  .navbar {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .navbar-brand {
+    font-size: 2.5rem;
+  }
+
+  .vignette-video {
+    max-height: none; /* let the video breathe */
+    height: 100vh;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}

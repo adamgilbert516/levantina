@@ -1,0 +1,26 @@
+<Homepage Assignment>
+<<Levantina Website>>
+
+HTML tags used:
+1. <div></div>
+2. <p></p>
+3. <h1></h1>
+4. <h2></h2>
+5. <a></a>
+6. <label></label>
+7. <input></input>
+8. <h3></h3>
+9. <br></br>
+10. <form></form>
+
+CSS properties used:
+1. .navbar-brand -> font-size: 2.25rem;
+2. .bg-blur -> backdrop-filter: blur(10px);
+3. .video-wrapper -> position: relative;
+4. .container-fluid -> padding-left, padding-right: 0;
+5. .vignette-video -> max-height: 800px;
+
+Brief (one-sentence) description of how you chose to use JavaScript and Bootstrap:
+JS: On my "events.html" page, there is JS that dynamically checks the size of the navbar and adjusts the margin of the main
+content to ensure the form shows up below the navbar.
+Bootstrap: I am using bootstrap classes in many tags throughout my homepage, including fs-* to adjust font sizes.
